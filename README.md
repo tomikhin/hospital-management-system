@@ -34,16 +34,16 @@ This system provides an efficient way to manage patient admissions, transfers, a
 `hospitalManagementSystem hospital;`
 
 - Admitting a Patient
-`cpphospital.admitPatient("Patient Name", "Medical Condition");`
+`hospital.admitPatient("Patient Name", "Medical Condition");`
 
 - Discharging a Patient
-`cpphospital.dischargePatient(bedIndex);  // bedIndex is the global index of the bed `
+`hospital.dischargePatient(bedIndex);  // bedIndex is the global index of the bed`
 
 - Transferring a Patient
-`cpphospital.transferPatient(sourceBedIndex, targetBedIndex);`
+`hospital.transferPatient(sourceBedIndex, targetBedIndex);`
 
 - Displaying System Status
-`cpphospital.displaySystem();`
+`hospital.displaySystem();`
 
 - Getting Patient Information
 `std::string info = hospital.getPatientInfo(bedIndex);`
