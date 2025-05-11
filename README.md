@@ -1,41 +1,38 @@
 # Hospital Management System
 
 ## Overview
-A console-based C++ application for managing patient flow in a small hospital environment. 
+A console-based C++ application for managing patient flow in a small hospital environment.  
 This system provides an efficient way to manage patient admissions, transfers, and discharges across multiple wards using linked list data structures.
 
-### Features
-1. Patient Admission
+## Features
 
-Automatically assigns patients to available beds
-Creates new wards when all existing wards are at full capacity
-Tracks patient name and medical condition
+### 1. Patient Admission
+- Automatically assigns patients to available beds  
+- Creates new wards when all existing wards are at full capacity  
+- Tracks patient name and medical condition  
 
-2. Patient Discharge
+### 2. Patient Discharge
+- Removes patients from the system  
+- Automatically shifts remaining patients to maintain no empty beds between occupied ones  
+- Validates bed index before discharge  
 
-Removes patients from the system
-Automatically shifts remaining patients to maintain no empty beds between occupied ones
-Validates bed index before discharge
+### 3. Patient Transfer
+- Moves patients between beds  
+- Handles the reorganization of patients to maintain the no-empty-beds requirement  
+- Validates source and target beds before transfer  
 
-3. Patient Transfer
+### 4. System Display
+- Shows the current status of all wards  
+- Lists patients in each ward with their bed assignments  
 
-Moves patients between beds
-Handles the reorganization of patients to maintain the no-empty-beds requirement
-Validates source and target beds before transfer
+### 5. Patient Information Retrieval
+- Provides patient name and condition based on bed index  
 
-4. System Display
+## Usage Instructions
 
-Shows the current status of all wards
-Lists patients in each ward with their bed assignments
-
-5. Patient Information Retrieval
-
-Provides patient name and condition based on bed index
-
-@ Usage Instructions
-
-- Initializing the System
-cpphospitalManagementSystem hospital;
+### Initializing the System
+```cpp
+hospitalManagementSystem hospital;
 
 - Admitting a Patient
 cpphospital.admitPatient("Patient Name", "Medical Condition");
