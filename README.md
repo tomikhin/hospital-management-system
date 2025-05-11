@@ -30,31 +30,29 @@ This system provides an efficient way to manage patient admissions, transfers, a
 
 ## Usage Instructions
 
-### Initializing the System
-```cpp
-hospitalManagementSystem hospital;`
+- Initializing the System
+`hospitalManagementSystem hospital;`
 
 - Admitting a Patient
-cpphospital.admitPatient("Patient Name", "Medical Condition");
+`cpphospital.admitPatient("Patient Name", "Medical Condition");`
 
 - Discharging a Patient
-cpphospital.dischargePatient(bedIndex);  // bedIndex is the global index of the bed
+`cpphospital.dischargePatient(bedIndex);  // bedIndex is the global index of the bed `
 
 - Transferring a Patient
-cpphospital.transferPatient(sourceBedIndex, targetBedIndex);
+`cpphospital.transferPatient(sourceBedIndex, targetBedIndex);`
 
 - Displaying System Status
-cpphospital.displaySystem();
+`cpphospital.displaySystem();`
 
 - Getting Patient Information
-cppstd::string info = hospital.getPatientInfo(bedIndex);
+`std::string info = hospital.getPatientInfo(bedIndex);`
 
 ## Implementation Details
-
-Uses linked lists to manage beds and wards
-Each bed has an occupancy status (occupied/vacant)
-Global indexing system for beds across all wards
-Automatic patient shifting to maintain continuous occupancy
+- Uses linked lists to manage beds and wards
+- Each bed has an occupancy status (occupied/vacant)
+- Global indexing system for beds across all wards
+- Automatic patient shifting to maintain continuous occupancy
 
 ## Error Handling
 The system validates operations and provides appropriate error messages for:
